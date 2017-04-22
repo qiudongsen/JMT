@@ -3,7 +3,7 @@
 
 if '%errorlevel%' NEQ '0' (
 
-    echo ÇëÇó¹ÜÀíÔ±È¨ÏÞ...
+    echo è¯·æ±‚ç®¡ç†å‘˜æƒé™...
 
     goto UACPrompt
 
@@ -27,21 +27,21 @@ if '%errorlevel%' NEQ '0' (
 
     CD /D "%~dp0"
 echo.
-echo ²½ÖèÒ»¡¢ÕýÔÚÌí¼ÓÁÙÊ±JRE»·¾³±äÁ¿
+echo æ­¥éª¤ä¸€ã€æ­£åœ¨æ·»åŠ ä¸´æ—¶JREçŽ¯å¢ƒå˜é‡
 set JRE_HOME=%~dp0jre
 echo %JRE_HOME%
 echo.
-echo ²½Öè¶þ¡¢ÕýÔÚ°²×°MySQL·þÎñ
+echo æ­¥éª¤äºŒã€æ­£åœ¨å®‰è£…MySQLæœåŠ¡
 call %~dp0mysql\bin\mysqld -install mysql
 net start mysql
-echo ²½ÖèÈý¡¢ÕýÔÚ°²×°Tomcat·þÎñ
+echo æ­¥éª¤ä¸‰ã€æ­£åœ¨å®‰è£…TomcatæœåŠ¡
 set CATALINA_HOME=%~dp0tomcat
 call %~dp0tomcat\bin\service.bat install tomcat
 echo.
-echo ²½ÖèËÄ¡¢ÕýÔÚÆô¶¯µµ°¸¹ÜÀíÏµÍ³
+echo æ­¥éª¤å››ã€æ­£åœ¨å¯åŠ¨TomcatæœåŠ¡
 sc config tomcat start= auto >nul
 net start tomcat
-echo °²×°Íê±Ï£¡´°¿Ú½«ÔÚ5Ãëºó×Ô¶¯¹Ø±Õ. . . 
+echo å®‰è£…å®Œæ¯•ï¼çª—å£å°†åœ¨5ç§’åŽè‡ªåŠ¨å…³é—­. . . 
 for /l %%i in (5,-1,0) do (
 	ping 127.1 -n 2 >nul
 )
