@@ -1,5 +1,5 @@
 # JMT
-JMT(JRE 1.7.0_80 + MySQL 5.6.26 + Tomcat 7.0.69)集成工具 Windows版
+JMT(JRE 1.7 + MySQL 5.6.36 + Tomcat 8.0.44)集成工具 Windows版
 <br/><br/>
 特点：<br/>
 1.集成JRE1.7，保持对Windows XP/2003系统的支持<br/>
